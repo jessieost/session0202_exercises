@@ -1,7 +1,9 @@
  body {
-      background: url("http://i.imgur.com/buQDCA7.jpg"); 
-      background-repeat: no-repeat;
+      background-image: url('http://i.imgur.com/NRaTbP9.jpg');
+      background-repeat: no-repeat; 
       background-size: cover;
+      background-attachment: fixed;
+      background-position: 100% 0%;
       color: white;
       font-family: rockwell;
     }
