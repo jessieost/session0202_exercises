@@ -10,5 +10,5 @@ puts "Awesome, what about your last name?"
 
 last_name = gets.chomp
 
-puts "Wow, " + first_name + " " + middle_name + " " + last_name + " is such a cool name!"
+puts "Wow, #{first_name} #{middle_name} #{last_name} is such a cool name!"
 
