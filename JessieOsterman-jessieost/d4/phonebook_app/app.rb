@@ -5,8 +5,8 @@ get '/' do
 end
 
 get '/contacts' do
-	erb :contacts
 	@contacts = ["Khangwelo", "Richard", "Amanda"]
+	erb :contacts
 end
 
 get '/contacts/:contact' do

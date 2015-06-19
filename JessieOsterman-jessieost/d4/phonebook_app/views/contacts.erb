@@ -1,5 +1,6 @@
+<h2>Contacts</h2>
 <ul>
-	<% @contacts.each do |name| %>
-		<%= name %>
+	<%  @contacts.each do |name| %>
+		<li><a href="localhost:9393/contacts/<%= name %>" ><%= name %></a></li>
 	<% end %>
 </ul>

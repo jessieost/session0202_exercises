@@ -9,9 +9,10 @@ end
 #puts index_of("circle", "p")
 
 def find_by_name (array, name)
-	array.each do |key, value|
-		if value = name
-			puts name
+	array.each do |squirrel|
+		if squirrel[:name] == name
+			puts squirrel
+			break
 		end
 	end
 end
@@ -25,10 +26,24 @@ people = [
 		:id => 2,
 		:name => "JJ"
 	},
-	# { 
-	# 	:id => 3,
-	# 	:name => "Lisa"
-	# }
+	{
+		:id => 3,
+		:name => "Jessie"
+	},
+	{
+		:id => 4,
+		:name => "Lisa"
+	}
 ]
 
-puts find_by_name(people, "Jessie")
+find_by_name(people, "Jessie")
+
+def filter_by_name (array, name)
+	array.each do |squirrel|
+		if squirrel[:name] == name
+			puts squirrel
+		end
+	end
+end
+
+filter_by_name(people, "Jessie")
