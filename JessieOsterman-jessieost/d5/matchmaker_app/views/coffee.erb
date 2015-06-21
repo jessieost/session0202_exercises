@@ -1,0 +1,42 @@
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:700' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		body {
+			background: #7DFDFE;
+			text-align: center;
+			padding-top: 150px;
+			font-family: 'Josefin Slab';
+		}
+		ul {
+			list-style-type: none;
+			font-size: 20px;
+		}
+		a:link {
+	    	text-decoration: none;
+	    	color: #6B8FB2;
+	    }
+	    a:visited {
+	    	text-decoration: none;
+	    	color: #6B8FB2;
+	    }
+	    a:hover {
+	    	text-decoration: underline;
+	    	text-shadow: 2px 2px #FFFFFF;
+	    	color: gray;
+	    }
+	</style>
+</head>
+
+<title> Beverage </title>
+
+<body>
+	<h1>What is your preferred breakfast beverage?</h1>
+		<ul>
+			<% @beverages.each do |drink, number|%>
+				<li>
+					<a href="/gender/female/<%= number %>"><%= drink %></a>
+					<% end %>
+				</li>
+		</ul>
+</body>

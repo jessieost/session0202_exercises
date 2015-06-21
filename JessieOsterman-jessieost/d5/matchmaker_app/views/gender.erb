@@ -1,0 +1,39 @@
+<head>
+	<title>Gender</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:700' rel='stylesheet' type='text/css'>
+	
+	<style type="text/css">
+		body {
+			background: #7DFDFE;
+			text-align: center;
+			padding-top: 150px;
+			font-family: 'Josefin Slab';
+		}
+		ul {
+			font-size: 20px;
+			list-style-type: none;
+			text-align: center;
+		}
+		img {
+			width: 20%;
+			height: auto;
+			border-radius: 30%;
+		}
+	</style>
+
+</head>
+
+<body>
+	<h1>Select your gender</h1>
+
+		<ul>
+			<% @gender.each do |sex| %>
+				<% if sex == "female" %>
+					<a href ="/gender/female"><img src="http://www.psdgraphics.com/file/female-gender-sign.jpg"></a>
+				<% else %>
+					<a href ="/gender/male"><img src="http://www.psdgraphics.com/file/male-gender-sign.jpg"></a>
+				<% end %>
+			<% end %>
+		</ul>
+</body>
