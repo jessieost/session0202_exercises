@@ -1,0 +1,31 @@
+<head>
+	<title>Gender</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:700' rel='stylesheet' type='text/css'>
+	
+	<style type="text/css">
+		body {
+			background: #7DFDFE;
+			text-align: center;
+			padding-top: 150px;
+			font-family: 'Josefin Slab';
+		}
+		img {
+			width: 20%;
+			height: auto;
+			border-radius: 30%;
+		}
+	</style>
+
+</head>
+<body>
+
+<h1> CHOOSE YOUR GENDER </h1>
+	<% @genders.each do |gender| %>
+		<% if gender == "female" %>
+			<%= link_to image_tag("http://www.psdgraphics.com/file/female-gender-sign.jpg"), gender_path(:gender => gender) %>
+		<% else %>
+			<%= link_to image_tag("http://www.psdgraphics.com/file/male-gender-sign.jpg"), gender_path(:gender => gender) %>
+		<% end %>
+	<% end %>
+</body>

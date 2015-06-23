@@ -1,0 +1,41 @@
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:700' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		body {
+			background: #7DFDFE;
+			text-align: center;
+			padding-top: 150px;
+			font-family: 'Josefin Slab';
+		}
+		ul {
+			list-style-type: none;
+			font-size: 20px;
+		}
+		a:link {
+	    	text-decoration: none;
+	    	color: #6B8FB2;
+	    }
+	    a:visited {
+	    	text-decoration: none;
+	    	color: #6B8FB2;
+	    }
+	    a:hover {
+	    	text-decoration: underline;
+	    	text-shadow: 2px 2px #FFFFFF;
+	    	color: gray;
+	    }
+	</style>
+</head>
+
+
+
+<body>
+<h1>Choose your preference below</h1>
+
+<% @choices.each do |choice, num| %>
+	<li>
+		<a href="/genders/<%= @gender %>/<%= num %>"><%= choice %></a>
+	</li>
+	<%end %>
+	</body>
