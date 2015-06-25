@@ -1,0 +1,19 @@
+<h1>Cool Places Around Cape Town!</h1>
+
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Text</th>
+		<th colspan="2"></th>
+	</tr>
+
+	<% @places.each do |place| %>
+		<tr>
+		<td><%= link_to place.name, place_path(place) %></td>
+		<td><%= link_to 'Edit', edit_place_path(place) %></td>
+		<td><%= link_to 'Destroy', place_path(place),
+			method: :delete,
+			data: { confirm: 'ARE YOU tdKE 100% SURE ABOUT THIS DECISION??? If so then okay...' } %>
+			 </td>
+		</tr>
+	<%end%>

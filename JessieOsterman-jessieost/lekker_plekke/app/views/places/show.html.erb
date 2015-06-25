@@ -1,0 +1,13 @@
+<h1><%= @place.name %></h1>
+
+<p>Area: <%= @place.area %></p>
+<p>Category: <%= @place.category %></p>
+<p>Description: <%= @place.description %> </p>
+
+<h2>Comments</h2>
+	<%= render @place.comments %>
+
+<h2>Add a comment:</h2>
+	<%= render 'comments/form' %>
+
+<%= link_to 'Back', places_path %>
